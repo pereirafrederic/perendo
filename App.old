@@ -1,0 +1,56 @@
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import {
+  TabNavigator,
+} from 'react-navigation';
+
+import Home from './components/Home'
+import About from './components/About'
+
+const tabNavigation = TabNavigator({
+    Home : {screen : Home},
+    About: {screen : About}
+  },
+  {
+   tabBarPosition: 'bottom',
+   tabBarOptions :{
+     showIcon : false,
+     showLabel : true,
+     indicatorStyle :{
+       height: 2,
+       backgroundColor: "#FFF"
+     },
+     style: {
+       backgroundColor: "#a2273C",
+       borderTopWidth: 1,
+       borderColor: "#3f101c"
+
+     }
+   }
+  }
+)
+export default class App extends React.Component {
+  render() {
+    return (
+    <View styl={{flex: 1}}>
+      <StatusBar hidden={true} />
+      <Tabs />
+    </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  author:{
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'left',
+    justifyContent: 'center',
+  }
+});

@@ -1,0 +1,13 @@
+{
+  articles:[
+  {
+    id:1,
+    title: 'les oestrogènes stériodiens',
+    data :'ce sont des trucs bizarres '
+  },{
+    id:2,
+    title: 'stratégie mondiale',
+    data: `L'expression perturbateur`
+    }
+]
+}
