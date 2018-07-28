@@ -1,6 +1,6 @@
 import React from 'react'
 import {View, Text, StyleSheet}from 'react-native'
-import List from './List'
+import Menu from './Menu'
 
 
 export default class Home extends React.Component {
@@ -8,7 +8,7 @@ export default class Home extends React.Component {
     return (
 
       <View >
-         <List />
+         <Menu />
       </View>
 
     );
