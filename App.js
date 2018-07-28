@@ -4,11 +4,10 @@ import { TabNavigator } from 'react-navigation';
 
 import Home from './components/Home'
 import About from './components/About'
-import Detail from './components/Detail'
+
 
 const Tabs = TabNavigator({
     Home : {screen : Home},
-    Detail : {screen : Detail},
     About: {screen : About}
   },
   {
