@@ -23,8 +23,10 @@
     "appcenter-analytics": "^1.7.1",
     "appcenter-crashes": "^1.7.1",
     "expo": "^23.0.4",
+    "lodash": "^4.17.10",
     "react": "16.0.0",
     "react-native": "0.50.3",
+    "react-native-render-html": "^3.10.0",
     "react-navigation": "^1.0.0-beta.21"
   }
 }
