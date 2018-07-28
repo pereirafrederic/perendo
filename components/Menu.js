@@ -27,7 +27,7 @@ constructor(props){
     return (
 
       <View >
-        _.each(this.state.menus, (menu) => <View> {menu.title}</View>)
+        _.each(this.state.menus, (menu) => {<View> {menu.title}</View>})
       </View>
 
     );
