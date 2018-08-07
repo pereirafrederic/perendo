@@ -29,7 +29,7 @@ export default class Home extends React.Component {
       <View >
       {this.state.title}
         _.each(this.state.menus, function (id, title) {
-          return  {<View> {menu.title}</View>}
+          return  <View> {title}</View>
 }
         )
       </View>
