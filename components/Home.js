@@ -23,15 +23,20 @@ export default class Home extends React.Component {
     }
   }
   render() {
-      var _ = require('lodash');
+
+    var _ = require('lodash');
+
+  var content =  _.each(this.state.menus, function (id, title) {
+      return  <View> {title}</View>}
+    );
+
+
     return (
 
       <View >
       {this.state.title}
-        _.each(this.state.menus, function (id, title) {
-          return  <View> {title}</View>
-}
-        )
+      {this.content}
+
       </View>
 
     );
