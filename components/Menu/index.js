@@ -6,7 +6,7 @@ export default class Menu extends React.Component {
 constructor(props){
   super(props)
   this.state ={
-    title: 'menu'
+    title: 'menu',
     menus: [
 
 { "id": 1, "title":"définition des PE" },
