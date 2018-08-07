@@ -6,6 +6,7 @@ export default class Menu extends React.Component {
 constructor(props){
   super(props)
   this.state ={
+    title: 'menu'
     menus: [
 
 { "id": 1, "title":"définition des PE" },
@@ -27,6 +28,7 @@ constructor(props){
     return (
 
       <View >
+      {this.state.title}
         _.each(this.state.menus, (menu) => {<View> {menu.title}</View>})
       </View>
 
