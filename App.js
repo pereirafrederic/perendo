@@ -59,3 +59,14 @@ export default createBottomTabNavigator(
     /* Other configuration remains unchanged */
   }
 );
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <View style={{flex: 1}}>
+        <StatusBar hidden={true} />
+        <createBottomTabNavigator />
+      </View>
+    );
+  }
+}
