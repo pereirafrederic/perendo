@@ -30,20 +30,21 @@ export default class Home extends React.Component {
   }
   render() {
 
-    var _ = require('lodash');
-
-  var content =  _.each(this.state.menus, function (id, title) {
-      return  <Text> {title}</Text>}
-    );
-
 
     return (
 
-  <View style={styles.container}>
-      {this.state.title}
-        <View style={styles.menus}>
-      {this.content}
-    </View>
+      <View style={styles.container}>
+        <View style={styles.title}>
+          <Text>perendo/Text>
+        </View>
+      <View style={styles.menus}>
+
+      <Text>définition des perturbateurs endocrinien</Text>
+      <Text>Sources</Text>
+      <Text>Effets sur la santé</Text>
+      <Text>conseil de prévention</Text>
+      <Text>Liens utiles</Text>
+      </View>
       </View>
 
     );
