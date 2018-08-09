@@ -1,7 +1,8 @@
 import React from 'react'
 import {View, Text, StyleSheet}from 'react-native'
+import { createStackNavigator } from 'react-navigation';
 
-export default class Home extends React.Component {
+class Home extends React.Component {
 
   static navigationOptions ={
     title: 'home',
@@ -50,6 +51,12 @@ export default class Home extends React.Component {
     );
   }
 }
+
+export default createStackNavigator({
+  Home: {
+    screen: Home
+  },
+});
 
 
 const styles = StyleSheet.create({
