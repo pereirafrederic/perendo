@@ -36,7 +36,7 @@ class Home extends React.Component {
 
       <View style={styles.container}>
         <View style={styles.title}>
-          <Text>perendo/Text>
+          <Text>perendo</Text>
         </View>
       <View style={styles.menus}>
 
