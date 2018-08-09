@@ -2,7 +2,7 @@ import React from 'react'
 import {ScrollView, View, Text, StyleSheet}from 'react-native'
 
 
-export default class About extends React.Component {
+export default class AboutScreen extends React.Component {
   render() {
     return (
       <ScrollView>

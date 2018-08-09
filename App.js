@@ -1,31 +1,21 @@
 import React from 'react';
-  import { StyleSheet, Text, View, StatusBar } from 'react-native';
-  import { createStackNavigator } from 'react-navigation';
+import { Text, View } from 'react-native';
+import { createBottomTabNavigator } from 'react-navigation'; // 2.11.2
 
-  import Home from './components/Home'
-  import About from './components/About'
+import HomeScreen from "./components/HomeScreen"
+import AboutScreen from "./components/AboutScreen"
 
-
-
-
-  export default class App extends React.Component {
-
-    const RootStack = createStackNavigator(
-      Home: {
-        screen: Home
-      },
-      {
-        initialRouteName: 'Home',
-      }
+class SettingsScreen extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Settings!</Text>
+      </View>
     );
-
-
-    render() {
-      return (
-        <View style={{flex: 1}}>
-          <StatusBar hidden={true} />
-         <RootStack />;
-        </View>
-      );
-    }
   }
+}
+
+export default createBottomTabNavigator({
+  Home: HomeScreen,
+  About: AboutScreen,
+});
