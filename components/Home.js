@@ -3,6 +3,11 @@ import {View, Text, StyleSheet}from 'react-native'
 
 export default class Home extends React.Component {
 
+  static navigationOptions ={
+    title: 'home',
+    tabBarVisible: true
+  }
+
   constructor(props){
     super(props)
     this.state ={
