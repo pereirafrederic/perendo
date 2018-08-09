@@ -1,46 +1,9 @@
 import React from 'react';
-import { Button, Text, View, StyleSheet } from 'react-native';
+import { Button, Text, View, StyleSheet, StatusBar, TouchableHighlight } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Version can be specified in package.json
-import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation'; // Version can be specified in package.json
+import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation'; // 2.11.2
 
-class HomeScreen extends React.Component {
-  render() {
-    return (
-
-      <View style={styles.container}>
-        <View style={styles.title}>
-          <Text>applicationperendo</Text>
-        </View>
-        <View style={styles.menus}>
-
-          <Text>définition des perturbateurs endocrinien</Text>
-          <Text>Sources</Text>
-          <Text>Effets sur la santé</Text>
-          <Text>conseil de prévention</Text>
-          <Text>Liens utiles</Text>
-        </View>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-   flex: 1,
-   paddingTop: 22,
-   marginLeft: 10
-  },
-  title :{
-     fontSize: 30
-  },
-  menus: {
-    paddingTop: 20,
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingBottom: 2,
-    backgroundColor:"cyan"
-  }
-});
+import HomeScreen from "./components/HomeScreen";
 
 class SettingsScreen extends React.Component {
   render() {
@@ -59,6 +22,8 @@ class SettingsScreen extends React.Component {
     );
   }
 }
+
+
 
 class DetailsScreen extends React.Component {
 
@@ -112,19 +77,14 @@ export default TabNavigator(
     tabBarComponent: TabBarBottom,
     tabBarPosition: 'bottom',
     tabBarOptions: {
-      activeTintColor: '#006400',
+      activeTintColor: 'white',
+      activeBackgroundColor : '#00859D',
       inactiveTintColor: 'black',
       inactiveBackgroundColor : 'white',
-      indicatorStyle :{
-       height: 20,
-       backgroundColor: "red"
-     },
      labelStyle: {
-    fontSize: 15,
-  },
-      style:{
-          backgroundColor: "#00859D",
-      }
+        fontSize: 15,
+        fontFamily: 'Oswald'
+     }
     },
     animationEnabled: false,
     swipeEnabled: false,
