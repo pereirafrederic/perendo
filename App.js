@@ -15,14 +15,21 @@ const Tabs = TabNavigator({
    tabBarOptions :{
      showIcon : false,
      showLabel : true,
+     activeTintColor:"pink",
+     labelStyle: {
+       fonSize: 13
+     },
+     tabStyle:{
+       width:100
+     },
      indicatorStyle :{
        height: 2,
-       backgroundColor: "#00859D"
+       backgroundColor: "red"
      },
      style: {
-       backgroundColor: "#00859D",
+       backgroundColor: "yellow",
        borderTopWidth: 1,
-       borderColor: "#3f101c"
+       borderColor: "white"
 
      }
    }
@@ -32,7 +39,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <StatusBar hidden={false} />
+        <StatusBar hidden={true} />
         <Tabs />
       </View>
     );
