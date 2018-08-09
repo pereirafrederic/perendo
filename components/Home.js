@@ -27,18 +27,34 @@ export default class Home extends React.Component {
     var _ = require('lodash');
 
   var content =  _.each(this.state.menus, function (id, title) {
-      return  <View> {title}</View>}
+      return  <Text> {title}</Text>}
     );
 
 
     return (
 
-      <View >
+  <View style={styles.container}>
       {this.state.title}
+        <View style={styles.menus}>
       {this.content}
-
+    </View>
       </View>
 
     );
   }
 }
+
+
+const styles = StyleSheet.create({
+  container: {
+   flex: 1,
+   paddingTop: 22,
+   marginLeft: 10
+  },
+  menus: {
+    paddingTop: 20,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 2
+  }
+});
