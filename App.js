@@ -1,21 +1,61 @@
 import React from 'react';
-import { Text, View } from 'react-native';
-import { createBottomTabNavigator } from 'react-navigation'; // 2.11.2
+import { createBottomTabNavigator, createStackNavigator } from 'react-navigation'; // 2.11.2
+import { Button, Text, View } from 'react-native';
 
-import HomeScreen from "./components/HomeScreen"
-import AboutScreen from "./components/AboutScreen"
-
-class SettingsScreen extends React.Component {
+class DetailsScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Settings!</Text>
+        <Text>Details!</Text>
       </View>
     );
   }
 }
 
-export default createBottomTabNavigator({
+class HomeScreen extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        {/* other code from before here */}
+        <Button
+          title="Go to Details"
+          onPress={() => this.props.navigation.navigate('Details')}
+        />
+      </View>
+    );
+  }
+}
+
+class SettingsScreen extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        {/* other code from before here */}
+        <Button
+          title="Go to Details"
+          onPress={() => this.props.navigation.navigate('Details')}
+        />
+      </View>
+    );
+  }
+}
+
+const HomeStack = createStackNavigator({
   Home: HomeScreen,
-  About: AboutScreen,
+  Details: DetailsScreen,
 });
+
+const SettingsStack = createStackNavigator({
+  Settings: SettingsScreen,
+  Details: DetailsScreen,
+});
+
+export default createBottomTabNavigator(
+  {
+    Home: HomeStack,
+    Settings: SettingsStack,
+  },
+  {
+    /* Other configuration remains unchanged */
+  }
+);
