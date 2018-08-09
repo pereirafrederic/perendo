@@ -5,7 +5,8 @@ export default class Home extends React.Component {
 
   static navigationOptions ={
     title: 'home',
-    tabBarVisible: true
+    tabBarVisible: true,
+    tabBarLabel:'page'
   }
 
   constructor(props){
