@@ -3,8 +3,6 @@ import { Button, Text, View, StyleSheet, StatusBar, TouchableHighlight } from 'r
 import { Ionicons } from '@expo/vector-icons'; // Version can be specified in package.json
 import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation'; // 2.11.2
 
-import HomeScreen from "./components/HomeScreen";
-
 class SettingsScreen extends React.Component {
   render() {
     return (
@@ -114,15 +112,7 @@ const HomeStack = StackNavigator({
 
 });
 
-
-import React from 'react';
-import { Button, Text, View, StyleSheet, StatusBar, TouchableHighlight } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; // Version can be specified in package.json
-import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation'; // 2.11.2
-
-
-
-export default class HomeScreen extends React.Component {
+class HomeScreen extends React.Component {
 
     static navigationOptions = {
     title: 'Home',
