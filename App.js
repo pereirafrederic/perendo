@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Text, View, StyleSheet, StatusBar, TouchableHighlight } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Version can be specified in package.json
 import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation'; // 2.11.2
+import Icon from 'react-native-vector-icons/FontAwesome'; // 5.0.0
 
 class SettingsScreen extends React.Component {
   render() {
@@ -24,36 +25,32 @@ class SettingsScreen extends React.Component {
 class SourceScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Les perturbateurs endocriniens sont présents dans notre environnement.</Text>
-        <Text>On les retrouve un peu partout.</Text>
-        <Text>On est en contact avec eux par différentes voies d''exposition, et le futur bébé est aussi exposé car le placenta permet le passage de ces substances.</Text>
-        <Text>Les perturbateurs endocriniens étant de manière générale lipophile, ils se stockent dans les graisses humaines et animales.</Text>
+      <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+        <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center',   fontWeight: 'bold' }}>
+          <Text>Les sources </Text>
+        </View>
+        <View style={{ flex: 5}}>
+          <Text>Les perturbateurs endocriniens sont présents dans notre environnement.</Text>
+          <Text>On les retrouve un peu partout.</Text>
+          <View style={styles.spacer}></View>
 
- <Text>Les voies d''exposition sont :</Text>
-
-        <Button
-          title="voie digestive"
-          onPress={() => this.props.navigation.navigate('Digestive')}
-        />
-        <Button
-         title="voie cutanée"
-         onPress={() => this.props.navigation.navigate('Cutanee')}
-        />
-        <Button
-         title="voie respiratoire"
-         onPress={() => this.props.navigation.navigate('Respiratoire')}
-        />
-      </View>
-    );
-  }
-}
-
-class DigestiveScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Digestive</Text>
+          <Text>On est en contact avec eux par différentes voies d''exposition, et le futur bébé est aussi exposé car le placenta permet le passage de ces substances.</Text>
+          <View style={styles.spacer}></View>
+          <Text>Les perturbateurs endocriniens étant de manière générale lipophile, ils se stockent dans les graisses humaines et animales.</Text>
+          <View     style={styles.spacer}></View>
+          <Text>Les voies d''exposition sont :</Text>
+        </View>
+        <View style={{ flex: 3, justifyContent: 'flex-start', alignItems: 'flex-start'}}>
+            <Icon.Button name="fa-eye" backgroundColor="#00859D" onPress={() =>this.props.navigation.navigate('Digestive')}>
+            voie digestive
+            </Icon.Button>
+            <Icon.Button name="fa-eye" backgroundColor="#00859D" onPress={() =>this.props.navigation.navigate('Cutanee')}>
+            voie cutanée
+            </Icon.Button>
+            <Icon.Button name="fas fa-eye" backgroundColor="#00859D" onPress={() =>this.props.navigation.navigate('Respiratoire')}>
+            voie respiratoire
+            </Icon.Button>
+        </View>
       </View>
     );
   }
@@ -62,9 +59,49 @@ class DigestiveScreen extends React.Component {
 class CutaneeScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Cutanee!</Text>
+
+      <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+            <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center',   fontWeight: 'bold' }}>
+                <Text>Les sources Cutanée</Text>
+            </View>
+             <View style={{ flex: 7}}>
+                <Text>Tous les produits qu'on peut se mettre sur la peau peuvent représenter une autre source d'exposition.</Text>
+                <View     style={styles.spacer}></View>
+                <Text>Les crèmes peuvent contenir du parabène et des phtalates</Text>
+                <Text>Les dentifrices peuvent avoir du triclosan</Text>
+                <View     style={styles.spacer}></View>
+                <Text>La manipulation des produits ménagers sans l'usage de gants est aussi une source d'exposition aux alkysphénols et phtalates.</Text>
+                <View     style={styles.spacer}></View>
+                <Text>L'utilisation d'insecticides pour les animaux ou le jardin est une autre voie de contamination par les pesticides.</Text>
+                <View     style={styles.spacer}></View>
+                <Text>Les retardateurs de flammes et les composés perfluorés peuvent être présent dans les vêtements et le mobilier.</Text>
+           </View>
       </View>
+    );
+  }
+}
+
+class DigestiveScreen extends React.Component {
+  render() {
+    return (
+          <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+            <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center',   fontWeight: 'bold' }}>
+                <Text>Les sources Digestives</Text>
+            </View>
+             <View style={{ flex: 7}}>
+                <Text>Les perturbateurs endocriniens sont présents dans différents aliments :</Text>
+                <View     style={styles.spacer}></View>
+                <Text>les fruits et les légumes via les pesticides</Text>
+                <Text>Les poissons peuvent contenir du mercure et des PCB</Text>
+                <Text>L'eau qui contient plusieurs substances comme les pesticides</Text>
+                <Text>Les viandes graisses et les produits laitiers contiennent plusieurs substances</Text>
+                <View     style={styles.spacer}></View>
+                <Text>Dans la cuisine, on en trouve aussi et c'est en chauffant qu'on peut contaminer sa nourriture</Text>
+                <Text>Les poêles en téflon contiennent des composés perfluorés.</Text>
+                <Text>les ustensiles de cuisine en plastiques ont des phtalates ou du bisphénol A</Text>
+                <Text>Les boites de conserve peuvent contenir des phtalates.</Text>
+             </View>
+           </View>
     );
   }
 }
@@ -72,12 +109,28 @@ class CutaneeScreen extends React.Component {
 class RespiratoireScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Respiratoire!</Text>
+
+        <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+            <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center',   fontWeight: 'bold' }}>
+                <Text>Les sources Respiratoire</Text>
+            </View>
+             <View style={{ flex: 7}}>
+                <Text> Les produits qui contiennent des perturbateurs endocriniens sont parfois volatiles
+                et donc peuvent entrer dans le corps via les poumons.</Text>
+                <View     style={styles.spacer}></View>
+                <Text>Il s'agit des produits ménagers, des produits de cosmétiques (notamment les sprays pour les cheveux ou les déodorants).</Text>
+                <View     style={styles.spacer}></View>
+                <Text>L'air intérieur et la poussière sont des sources importantes de perturbateurs endocriniens </Text>
+                <Text>car ils accumulent ceux qui sont libérés par les objets de la maison : pesticides, phtalates, etc...</Text>
+                <View     style={styles.spacer}></View>
+           </View>
       </View>
     );
   }
 }
+
+
+
 
 
 class DetailsScreen extends React.Component {
@@ -102,15 +155,6 @@ class DetailsScreen extends React.Component {
   }
 }
 
-const HomeStack = StackNavigator({
-  Home: { screen: HomeScreen },
-  Source : { screen: SourceScreen },
-  Digestive :{ screen: DigestiveScreen },
-  Cutanee :{ screen: CutaneeScreen },
-  Respiratoire: { screen: RespiratoireScreen },
-  Details: { screen: DetailsScreen },
-
-});
 
 class HomeScreen extends React.Component {
 
@@ -265,6 +309,17 @@ const styles = StyleSheet.create({
     boxShadow: '0px 0px 1px 1px white'
 
   }
+
+});
+
+
+const HomeStack = StackNavigator({
+  Home: { screen: HomeScreen },
+  Source : { screen: SourceScreen },
+  Digestive :{ screen: DigestiveScreen },
+  Cutanee :{ screen: CutaneeScreen },
+  Respiratoire: { screen: RespiratoireScreen },
+  Details: { screen: DetailsScreen }
 
 });
 
