@@ -1,3 +1,5 @@
+
+import React from 'react';
 import { Button, Text, View, StyleSheet, StatusBar, TouchableHighlight } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Version can be specified in package.json
 import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation'; // 2.11.2
@@ -207,6 +209,75 @@ class DetailsScreen extends React.Component {
 }
 
 
+
+class ConseilScreen extends React.Component {
+
+    static navigationOptions = {
+    title: 'Conseils de prévention',
+  };
+  render() {
+    return (
+
+      <View style={styles.container}>
+      <StatusBar hidden={true} />
+        <View style={styles.title}>
+          <Text>Conseils de prévention</Text>
+        </View>
+        <View style={styles.menus}>
+          <View style={styles.cubeplein}>
+            <View style={styles.cube}>
+               <TouchableHighlight onPress={() => this.props.navigation.navigate('ConseilsGeneraux')} underlayColor="white">
+                <View style={styles.button}>
+                    <Text style={styles.buttonText}>Conseils généraux</Text>
+                  </View>
+              </TouchableHighlight>
+            </View>
+          </View>
+          <View style={styles.spacer}></View>
+          <View style={styles.cubeplein}>
+            <View style={styles.cube}>
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('HygeneCosmetique')} underlayColor="white">
+                <View style={styles.button}>
+                    <Text style={styles.buttonText}>Produits d'hygiène et </Text>
+                    <Text style={styles.buttonText}>cosmétiques</Text>
+                  </View>
+              </TouchableHighlight>
+            </View>
+            <View style={styles.cube}>
+               <TouchableHighlight onPress={() => this.props.navigation.navigate('EntretientJardin')} underlayColor="white">
+                <View style={styles.button}>
+                    <Text style={styles.buttonText}>Produits d'entretiens </Text>
+                    <Text style={styles.buttonText}>ménagers et jardin</Text>
+                  </View>
+              </TouchableHighlight>
+            </View>
+
+          </View>
+          <View style={styles.spacer}></View>
+          <View style={styles.cubeplein}>
+            <View style={styles.cube}>
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('ChambreBebe')} underlayColor="white">
+                <View style={styles.button}>
+                    <Text style={styles.buttonText}>Chambre de bébé</Text>
+                  </View>
+              </TouchableHighlight>
+            </View>
+            <View style={styles.cube}>
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('AlimentationCuisine')} underlayColor="white">
+                <View style={styles.button}>
+                    <Text style={styles.buttonText}>Alimentation et cuisine</Text>
+                  </View>
+              </TouchableHighlight>
+            </View>
+          </View>
+          <View style={styles.spacer}></View>
+
+        </View>
+      </View>
+    );
+  }
+}
+
 class HomeScreen extends React.Component {
 
     static navigationOptions = {
@@ -227,7 +298,7 @@ class HomeScreen extends React.Component {
           <Text>criniens</Text>
         </View>
         <View style={styles.detail}>
-          <Text> Les perturbateurs endocriniens (PE) sont « des substances chimiques d’origine naturelle ou artificielle étrangères à l’organisme qui peuvent interférer avec le fonctionnement du système endocrinien et induire ainsi des effets délétères sur cet organisme ou sur ses descendants »</Text>
+          <Text> Cette application est le fruit d'un travail de fin d'étude d'un médecin généraliste. Elle a été crée pour que les femmes enceintes puissent avoir accès à n'importe quel moment à des conseils sur l'exposition aux perturbateurs endocriniens.</Text>
         </View>
         <View style={styles.menus}>
           <View style={styles.cubeplein}>
@@ -260,21 +331,21 @@ class HomeScreen extends React.Component {
           <View style={styles.spacer}></View>
           <View style={styles.cubeplein}>
             <View style={styles.cube}>
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('Details')} underlayColor="white">
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('MenuConseil')} underlayColor="white">
                 <View style={styles.button}>
                     <Text style={styles.buttonText}>Conseil de prévention</Text>
                   </View>
               </TouchableHighlight>
             </View>
             <View style={styles.cube}>
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('Details')} underlayColor="white">
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('Liens')} underlayColor="white">
                 <View style={styles.button}>
                     <Text style={styles.buttonText}>Liens utiles</Text>
                   </View>
               </TouchableHighlight>
             </View>
           </View>
-
+          <View   style={styles.spacer}></View>
         </View>
       </View>
     );
@@ -372,6 +443,7 @@ const HomeStack = StackNavigator({
   Digestive :{ screen: DigestiveScreen },
   Cutanee :{ screen: CutaneeScreen },
   Respiratoire: { screen: RespiratoireScreen },
+  MenuConseil: { screen: ConseilScreen },
   Details: { screen: DetailsScreen }
 
 });
