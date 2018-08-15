@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, Text, View, StyleSheet, StatusBar, TouchableHighlight } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Version can be specified in package.json
 import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation'; // 2.11.2
@@ -129,8 +128,60 @@ class RespiratoireScreen extends React.Component {
   }
 }
 
+class EffetSanteScreen extends React.Component {
+  render() {
+    return (
+        <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+            <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center',   fontWeight: 'bold' }}>
+                <Text>Les perturbateurs endocriniens ont donc une action sur nos hormones.</Text>
+            </View>
+             <View style={{ flex: 7}}>
+                <Text>Les effets sur la santé sont nombreux. Ils peuvent soit apparaitre avant même l'accouchement, </Text>
+                <Text>être découvert lors de la naissance ou bien se développer plus tardivement.</Text>
+                 <View     style={styles.spacer}></View>
+                 <Text>En voici les principaux :</Text>
+                <View     style={styles.spacer}></View>
+                    <Text>- prématurité, petit poids de naissance</Text>
+                    <Text>- retard de croissance du bébé pendant la grossesse</Text>
+                    <Text>- malformations génitales : cryptorchidie (testicules non descendus dans les bourses), hypospadias (méat urinaire mal positionné), micro pénis</Text>
+                    <Text>- troubles neurologiques et du comportement : autisme, baisse du QI, hyperactivitén troubles de l'attention</Text>
+                    <Text>- puberté précoce chez les filles</Text>
+                    <Text>- maladies gynécologiques : syndrome des ovaires polykystiques, endométriose</Text>
+                    <Text>- problème de fertilité à l'âge adulte</Text>
+                    <Text>- dysthyroidies : hypothyroidie,hyperthyroidie</Text>
+                    <Text>- cancers</Text>
+                    <Text>- maladies métaboliques : obésité, diabète</Text>
 
+           </View>
+      </View>
+    );
+  }
+}
 
+class DefinitionScreen extends React.Component {
+  render() {
+    return (
+        <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+            <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center',   fontWeight: 'bold' }}>
+                <Text>La définition des perturbateurs endocriniens</Text>
+            </View>
+             <View style={{ flex: 7}}>
+                <Text>La définition des perturbateurs endocriniens selon l''Organisation Mondiale de la Santé est la suivante :  Un perturbateur endocrinien est une substance ou un mélange de substances,
+                qui altère les fonctions du système endocrinien et de ce fait induit des effets néfastes dans un organisme intact, chez sa progéniture ou au sein de (sous)- populations.</Text>
+                <View     style={styles.spacer}></View>
+                <Text>Ce sont des substances qui peuvent modifier l''action d''une hormone, soit en mimant son effet à un moment non désiré, soit en empêchant son action,
+                soit en agissant sur la régulation de l''hormone, c''est à dire sa fabrication, son stockage par exemple.</Text>
+                <View     style={styles.spacer}></View>
+                <Text>Les Hommes sont entourés de ces substances, et il peut donc exister plusieurs phénomènes de perturbations en même temps dans le corps
+                dont le résultat sur les hormones sont difficiles à prévoir. C''est l''effet cocktail.</Text>
+                <Text>Les effets des perturbateurs endocriniens peuvent avoir des conséquences lorsque l'''exposition se produit à un moment critique du développement humain,
+                comme la grossesse par exemple.</Text>
+                <View     style={styles.spacer}></View>
+           </View>
+      </View>
+    );
+  }
+}
 
 
 class DetailsScreen extends React.Component {
@@ -181,7 +232,7 @@ class HomeScreen extends React.Component {
         <View style={styles.menus}>
           <View style={styles.cubeplein}>
             <View style={styles.cube}>
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('Details')} underlayColor="white">
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('Definition')} underlayColor="white">
                 <View style={styles.button}>
                     <Text style={styles.buttonText}>Définition des perturbateurs endocrinien</Text>
                   </View>
@@ -198,7 +249,7 @@ class HomeScreen extends React.Component {
               </TouchableHighlight>
             </View>
             <View style={styles.cube}>
-               <TouchableHighlight onPress={() => this.props.navigation.navigate('Details')} underlayColor="white">
+               <TouchableHighlight onPress={() => this.props.navigation.navigate('EffetSante')} underlayColor="white">
                 <View style={styles.button}>
                     <Text style={styles.buttonText}>Effets sur la santé</Text>
                   </View>
@@ -315,6 +366,8 @@ const styles = StyleSheet.create({
 
 const HomeStack = StackNavigator({
   Home: { screen: HomeScreen },
+  Definition: { screen: DefinitionScreen },
+  EffetSante: { screen: EffetSanteScreen },
   Source : { screen: SourceScreen },
   Digestive :{ screen: DigestiveScreen },
   Cutanee :{ screen: CutaneeScreen },
