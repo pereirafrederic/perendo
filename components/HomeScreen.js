@@ -187,6 +187,14 @@ class ConseilsScreen extends React.Component {
     return (
     <View style={styles.container}>
 
+        <View style={styles.title}>
+          <Text>Conseils de prévention</Text>
+        </View>
+        <View stylz={styles.barre}> </View>
+        <View style={styles.detail}>
+          <Text>vous trouverez ici des conseils à appliquer dans votre quotidien pour réduire l'exposition aux perturbateurs endocriniens </Text>
+        </View>
+
         <View style={styles.menus}>
 
           <View style={styles.cubeplein}>
