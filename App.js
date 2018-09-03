@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Button, Text, View, StyleSheet, StatusBar, TouchableHighlight } from 'react-native';
+import { Button, Text, View, ScrollView, StyleSheet, StatusBar, TouchableHighlight } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Version can be specified in package.json
 import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation'; // 2.11.2
 import Icon from 'react-native-vector-icons/FontAwesome'; // 5.0.0
@@ -27,9 +26,8 @@ class SourceScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
-        <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center',   fontWeight: 'bold' }}>
-          <Text>Les sources </Text>
-        </View>
+          <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>Les sources </Text>
+
         <View style={{ flex: 5}}>
           <Text>Les perturbateurs endocriniens sont présents dans notre environnement.</Text>
           <Text>On les retrouve un peu partout.</Text>
@@ -62,9 +60,8 @@ class CutaneeScreen extends React.Component {
     return (
 
       <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
-            <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center',   fontWeight: 'bold' }}>
-                <Text>Les sources Cutanée</Text>
-            </View>
+              <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>Les sources Cutanée</Text>
+
              <View style={{ flex: 7}}>
                 <Text>Tous les produits qu'on peut se mettre sur la peau peuvent représenter une autre source d'exposition.</Text>
                 <View     style={styles.spacer}></View>
@@ -86,9 +83,8 @@ class DigestiveScreen extends React.Component {
   render() {
     return (
           <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
-            <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center',   fontWeight: 'bold' }}>
-                <Text>Les sources Digestives</Text>
-            </View>
+             <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>Les sources Digestives</Text>
+
              <View style={{ flex: 7}}>
                 <Text>Les perturbateurs endocriniens sont présents dans différents aliments :</Text>
                 <View     style={styles.spacer}></View>
@@ -112,9 +108,8 @@ class RespiratoireScreen extends React.Component {
     return (
 
         <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
-            <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center',   fontWeight: 'bold' }}>
-                <Text>Les sources Respiratoire</Text>
-            </View>
+              <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>Les sources Respiratoire</Text>
+
              <View style={{ flex: 7}}>
                 <Text> Les produits qui contiennent des perturbateurs endocriniens sont parfois volatiles
                 et donc peuvent entrer dans le corps via les poumons.</Text>
@@ -134,10 +129,10 @@ class EffetSanteScreen extends React.Component {
   render() {
     return (
         <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
-            <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center',   fontWeight: 'bold' }}>
-                <Text>Les perturbateurs endocriniens ont donc une action sur nos hormones.</Text>
-            </View>
+              <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>Les perturbateurs endocriniens ont donc une action sur nos hormones.</Text>
+
              <View style={{ flex: 7}}>
+             <ScrollView>
                 <Text>Les effets sur la santé sont nombreux. Ils peuvent soit apparaitre avant même l'accouchement, </Text>
                 <Text>être découvert lors de la naissance ou bien se développer plus tardivement.</Text>
                  <View     style={styles.spacer}></View>
@@ -153,7 +148,7 @@ class EffetSanteScreen extends React.Component {
                     <Text>- dysthyroidies : hypothyroidie,hyperthyroidie</Text>
                     <Text>- cancers</Text>
                     <Text>- maladies métaboliques : obésité, diabète</Text>
-
+</ScrollView>
            </View>
       </View>
     );
@@ -164,10 +159,11 @@ class DefinitionScreen extends React.Component {
   render() {
     return (
         <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
-            <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center',   fontWeight: 'bold' }}>
-                <Text>La définition des perturbateurs endocriniens</Text>
-            </View>
-             <View style={{ flex: 7}}>
+
+                <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>
+                La définition des perturbateurs endocriniens</Text>
+             <View style={{ flex: 10}}>
+             <ScrollView>
                 <Text>La définition des perturbateurs endocriniens selon l''Organisation Mondiale de la Santé est la suivante :  Un perturbateur endocrinien est une substance ou un mélange de substances,
                 qui altère les fonctions du système endocrinien et de ce fait induit des effets néfastes dans un organisme intact, chez sa progéniture ou au sein de (sous)- populations.</Text>
                 <View     style={styles.spacer}></View>
@@ -179,6 +175,7 @@ class DefinitionScreen extends React.Component {
                 <Text>Les effets des perturbateurs endocriniens peuvent avoir des conséquences lorsque l'''exposition se produit à un moment critique du développement humain,
                 comme la grossesse par exemple.</Text>
                 <View     style={styles.spacer}></View>
+           </ScrollView>
            </View>
       </View>
     );
@@ -191,7 +188,7 @@ class DetailsScreen extends React.Component {
     constructor(props){
     super(props)
     this.state ={
-      title: 'DetailsScreen2'
+      title: 'DetailsScreen2',
     }
   }
 
@@ -208,75 +205,6 @@ class DetailsScreen extends React.Component {
   }
 }
 
-
-
-class ConseilScreen extends React.Component {
-
-    static navigationOptions = {
-    title: 'Conseils de prévention',
-  };
-  render() {
-    return (
-
-      <View style={styles.container}>
-      <StatusBar hidden={true} />
-        <View style={styles.title}>
-          <Text>Conseils de prévention</Text>
-        </View>
-        <View style={styles.menus}>
-          <View style={styles.cubeplein}>
-            <View style={styles.cube}>
-               <TouchableHighlight onPress={() => this.props.navigation.navigate('ConseilsGeneraux')} underlayColor="white">
-                <View style={styles.button}>
-                    <Text style={styles.buttonText}>Conseils généraux</Text>
-                  </View>
-              </TouchableHighlight>
-            </View>
-          </View>
-          <View style={styles.spacer}></View>
-          <View style={styles.cubeplein}>
-            <View style={styles.cube}>
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('HygeneCosmetique')} underlayColor="white">
-                <View style={styles.button}>
-                    <Text style={styles.buttonText}>Produits d'hygiène et </Text>
-                    <Text style={styles.buttonText}>cosmétiques</Text>
-                  </View>
-              </TouchableHighlight>
-            </View>
-            <View style={styles.cube}>
-               <TouchableHighlight onPress={() => this.props.navigation.navigate('EntretientJardin')} underlayColor="white">
-                <View style={styles.button}>
-                    <Text style={styles.buttonText}>Produits d'entretiens </Text>
-                    <Text style={styles.buttonText}>ménagers et jardin</Text>
-                  </View>
-              </TouchableHighlight>
-            </View>
-
-          </View>
-          <View style={styles.spacer}></View>
-          <View style={styles.cubeplein}>
-            <View style={styles.cube}>
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('ChambreBebe')} underlayColor="white">
-                <View style={styles.button}>
-                    <Text style={styles.buttonText}>Chambre de bébé</Text>
-                  </View>
-              </TouchableHighlight>
-            </View>
-            <View style={styles.cube}>
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('AlimentationCuisine')} underlayColor="white">
-                <View style={styles.button}>
-                    <Text style={styles.buttonText}>Alimentation et cuisine</Text>
-                  </View>
-              </TouchableHighlight>
-            </View>
-          </View>
-          <View style={styles.spacer}></View>
-
-        </View>
-      </View>
-    );
-  }
-}
 
 class HomeScreen extends React.Component {
 
@@ -298,7 +226,7 @@ class HomeScreen extends React.Component {
           <Text>criniens</Text>
         </View>
         <View style={styles.detail}>
-          <Text> Cette application est le fruit d'un travail de fin d'étude d'un médecin généraliste. Elle a été crée pour que les femmes enceintes puissent avoir accès à n'importe quel moment à des conseils sur l'exposition aux perturbateurs endocriniens.</Text>
+          <Text> Les perturbateurs endocriniens (PE) sont « des substances chimiques d’origine naturelle ou artificielle étrangères à l’organisme qui peuvent interférer avec le fonctionnement du système endocrinien et induire ainsi des effets délétères sur cet organisme ou sur ses descendants »</Text>
         </View>
         <View style={styles.menus}>
           <View style={styles.cubeplein}>
@@ -331,21 +259,21 @@ class HomeScreen extends React.Component {
           <View style={styles.spacer}></View>
           <View style={styles.cubeplein}>
             <View style={styles.cube}>
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('MenuConseil')} underlayColor="white">
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('Details')} underlayColor="white">
                 <View style={styles.button}>
                     <Text style={styles.buttonText}>Conseil de prévention</Text>
                   </View>
               </TouchableHighlight>
             </View>
             <View style={styles.cube}>
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('Liens')} underlayColor="white">
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('Details')} underlayColor="white">
                 <View style={styles.button}>
                     <Text style={styles.buttonText}>Liens utiles</Text>
                   </View>
               </TouchableHighlight>
             </View>
           </View>
-          <View   style={styles.spacer}></View>
+
         </View>
       </View>
     );
@@ -355,11 +283,13 @@ class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:"#00859D"
+    backgroundColor:"#339999",
+    margingBottom:4
   },
   title :{
     flex: 1,
     fontSize: 30,
+    color:'white',
     fontWeight: 'bold',
     alignItems: 'center',
     justifyContent: 'center',
@@ -389,16 +319,16 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignContent:'stretch',
     alignItems:'stretch',
-    backgroundColor:"#00859D",
+    backgroundColor:"#339999",
     flexWrap:'wrap'
   },
   cubeplein:{
     flex:1,
     minWidth: 100,
     minHeight: 70,
-    margin: 0.5,
+    margin: 0.3,
     margingBottom :2,
-    padding: 0.5,
+    padding: 0.3,
     borderRadius: 4,
     backgroundColor:'white',
     flexDirection: 'row',
@@ -409,7 +339,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     alignContent: 'center',
-    backgroundColor: '#00859D'
+    backgroundColor: '#339999'
   },
   buttonText: {
     flex:1,
@@ -422,9 +352,9 @@ const styles = StyleSheet.create({
   cube:{
     flex: 1,
     borderRadius: 4,
-    borderWidth: 4,
+    borderWidth: 3,
     borderColor: 'white',
-    backgroundColor:'#00859D',
+    backgroundColor:'#339999',
     alignItems: 'center',
     justifyContent: 'center',
     fontFamily: 'Oswald',
@@ -436,14 +366,41 @@ const styles = StyleSheet.create({
 
 
 const HomeStack = StackNavigator({
-  Home: { screen: HomeScreen },
-  Definition: { screen: DefinitionScreen },
-  EffetSante: { screen: EffetSanteScreen },
-  Source : { screen: SourceScreen },
-  Digestive :{ screen: DigestiveScreen },
-  Cutanee :{ screen: CutaneeScreen },
-  Respiratoire: { screen: RespiratoireScreen },
-  MenuConseil: { screen: ConseilScreen },
+  Home: { screen: HomeScreen ,
+    navigationOptions: () => ({
+      title: `Application perendo`,
+      headerLayoutPreset : 'center'
+    })},
+  Definition: { screen: DefinitionScreen,
+    navigationOptions: () => ({
+      title: `La définition`,
+      headerLayoutPreset : 'center'
+    }) },
+  EffetSante: { screen: EffetSanteScreen,
+    navigationOptions: () => ({
+      title: `Les effets`,
+      headerLayoutPreset : 'center'
+    }) },
+  Source : { screen: SourceScreen,
+    navigationOptions: () => ({
+      title: `Les sources`,
+      headerLayoutPreset : 'center'
+    }) },
+  Digestive :{ screen: DigestiveScreen,
+    navigationOptions: () => ({
+      title: `Les sources digestive`,
+      headerLayoutPreset : 'center'
+    }) },
+  Cutanee :{ screen: CutaneeScreen,
+    navigationOptions: () => ({
+      title: `Les sources cutanée`,
+      headerLayoutPreset : 'center'
+    }) },
+  Respiratoire: { screen: RespiratoireScreen,
+    navigationOptions: () => ({
+      title: `Les sources respiratoire`,
+      headerLayoutPreset : 'center'
+    }) },
   Details: { screen: DetailsScreen }
 
 });
