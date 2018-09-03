@@ -39,17 +39,34 @@ class SourceScreen extends React.Component {
           <View     style={styles.spacer}></View>
           <Text>Les voies d''exposition sont :</Text>
         </View>
-        <View style={{ flex: 3, justifyContent: 'flex-start', alignItems: 'flex-start'}}>
-            <Icon.Button name="fa-eye" backgroundColor="#00859D" onPress={() =>this.props.navigation.navigate('Digestive')}>
-            voie digestive
-            </Icon.Button>
-            <Icon.Button name="fa-eye" backgroundColor="#00859D" onPress={() =>this.props.navigation.navigate('Cutanee')}>
-            voie cutanée
-            </Icon.Button>
-            <Icon.Button name="fas fa-eye" backgroundColor="#00859D" onPress={() =>this.props.navigation.navigate('Respiratoire')}>
-            voie respiratoire
-            </Icon.Button>
-        </View>
+        <View style={styles.menus_white}>
+          <View style={styles.cubeplein}>
+            <View style={styles.cube}>
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('Digestive')} underlayColor="white">
+                <View style={styles.button}>
+                    <Text style={styles.buttonText}>  voie digestive</Text>
+                  </View>
+              </TouchableHighlight>
+            </View>
+          </View>
+          <View style={styles.spacer}></View>
+          <View style={styles.cubeplein}>
+            <View style={styles.cube}>
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('Cutanee')} underlayColor="white">
+                <View style={styles.button}>
+                    <Text style={styles.buttonText}>voie cutanée</Text>
+                  </View>
+              </TouchableHighlight>
+            </View>
+            <View style={styles.cube}>
+               <TouchableHighlight onPress={() => this.props.navigation.navigate('EffetSante')} underlayColor="white">
+                <View style={styles.button}>
+                    <Text style={styles.buttonText}>voie respiratoire</Text>
+                  </View>
+              </TouchableHighlight>
+            </View>
+          </View>
+      </View>
       </View>
     );
   }
@@ -538,6 +555,17 @@ const styles = StyleSheet.create({
     alignContent:'stretch',
     alignItems:'stretch',
     backgroundColor:"#339999",
+    flexWrap:'wrap'
+  },
+  menus_white :{
+    flex: 4,
+    paddingTop: 20,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 2,
+    flexDirection: 'column',
+    alignContent:'stretch',
+    alignItems:'stretch',
     flexWrap:'wrap'
   },
   cubeplein:{
