@@ -33,11 +33,11 @@ class SourceScreen extends React.Component {
           <Text>On les retrouve un peu partout.</Text>
           <View style={styles.spacer}></View>
 
-          <Text>On est en contact avec eux par différentes voies d'exposition, et le futur bébé est aussi exposé car le placenta permet le passage de ces substances.</Text>
+          <Text>On est en contact avec eux par différentes voies d''exposition, et le futur bébé est aussi exposé car le placenta permet le passage de ces substances.</Text>
           <View style={styles.spacer}></View>
           <Text>Les perturbateurs endocriniens étant de manière générale lipophile, ils se stockent dans les graisses humaines et animales.</Text>
           <View     style={styles.spacer}></View>
-          <Text>Les voies d'exposition sont :</Text>
+          <Text>Les voies d''exposition sont :</Text>
         </View>
         <View style={styles.menus_white}>
           <View style={styles.cubeplein}>
@@ -59,7 +59,7 @@ class SourceScreen extends React.Component {
               </TouchableHighlight>
             </View>
             <View style={styles.cube}>
-               <TouchableHighlight onPress={() => this.props.navigation.navigate('EffetSante')} underlayColor="white">
+               <TouchableHighlight onPress={() => this.props.navigation.navigate('Respiratoire')} underlayColor="white">
                 <View style={styles.button}>
                     <Text style={styles.buttonText}>voie respiratoire</Text>
                   </View>
@@ -181,15 +181,15 @@ class DefinitionScreen extends React.Component {
                 La définition des perturbateurs endocriniens</Text>
              <View style={{ flex: 10}}>
              <ScrollView>
-                <Text>La définition des perturbateurs endocriniens selon l'Organisation Mondiale de la Santé est la suivante :  Un perturbateur endocrinien est une substance ou un mélange de substances,
+                <Text>La définition des perturbateurs endocriniens selon l''Organisation Mondiale de la Santé est la suivante :  Un perturbateur endocrinien est une substance ou un mélange de substances,
                 qui altère les fonctions du système endocrinien et de ce fait induit des effets néfastes dans un organisme intact, chez sa progéniture ou au sein de (sous)- populations.</Text>
                 <View     style={styles.spacer}></View>
-                <Text>Ce sont des substances qui peuvent modifier l'action d'une hormone, soit en mimant son effet à un moment non désiré, soit en empêchant son action,
-                soit en agissant sur la régulation de l'hormone, cest à dire sa fabrication, son stockage par exemple.</Text>
+                <Text>Ce sont des substances qui peuvent modifier l''action d''une hormone, soit en mimant son effet à un moment non désiré, soit en empêchant son action,
+                soit en agissant sur la régulation de l''hormone, c''est à dire sa fabrication, son stockage par exemple.</Text>
                 <View     style={styles.spacer}></View>
                 <Text>Les Hommes sont entourés de ces substances, et il peut donc exister plusieurs phénomènes de perturbations en même temps dans le corps
-                dont le résultat sur les hormones sont difficiles à prévoir. C'est l'effet cocktail.</Text>
-                <Text>Les effets des perturbateurs endocriniens peuvent avoir des conséquences lorsque l'exposition se produit à un moment critique du développement humain,
+                dont le résultat sur les hormones sont difficiles à prévoir. C''est l''effet cocktail.</Text>
+                <Text>Les effets des perturbateurs endocriniens peuvent avoir des conséquences lorsque l'''exposition se produit à un moment critique du développement humain,
                 comme la grossesse par exemple.</Text>
                 <View     style={styles.spacer}></View>
            </ScrollView>
@@ -216,7 +216,7 @@ class ConseilsScreen extends React.Component {
 
           <View style={styles.cubeplein}>
             <View style={styles.cube}>
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('Source')} underlayColor="white">
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('Alimentation')} underlayColor="white">
                 <View style={styles.button}>
                     <Text style={styles.buttonText}> Alimentation et cuisine</Text>
                   </View>
