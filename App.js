@@ -4,20 +4,35 @@ import { Ionicons } from '@expo/vector-icons'; // 6.3.1
 import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation'; // 2.11.2
 import Icon from 'react-native-vector-icons/FontAwesome'; // 5.0.0
 
-class SettingsScreen extends React.Component {
+class InformationScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Settings!</Text>
-        <Button
-          title="Go to Home"
-          onPress={() => this.props.navigation.navigate('Home')}
-        />
-        <Button
-          title="Go to Details"
-          onPress={() => this.props.navigation.navigate('Details')}
-        />
-      </View>
+      <View style={{ flex: 1,marginLeft: 10,backgroundColor:"#e0f2f1", justifyContent: 'left', alignItems: 'left' }}>
+      <View style={{ flex: 1,marginLeft: 10,backgroundColor:"#e0f2f1", justifyContent: 'left', alignItems: 'left' }}>
+      <View     style={styles.spacer}></View>
+        <Text>Cette application a été crée en react native pour la raison simple qu'il permet de le diffuser sur telephone ou sur tablette, qu'il soit sous android ou iOS (Apple) </Text>
+        <View     style={styles.spacer}></View>
+        <Text>moi, Aurelie pereira, je voulais numériser/digitaliser les informations sur les perturbateurs endocriniens </Text>
+        <View     style={styles.spacer}></View>
+        <Text>En faire quelque chose d'accessible et de simple,</Text>
+        <Text>et pourquoi pas en faire un point d'accès de regroupement de toutes les informations sur ce qui pourrait perturber notre système endocrinien</Text>
+        <View     style={styles.spacer}></View>
+        <View     style={styles.spacer}></View>
+        <Text>je vous remercie pour votre attention et pour avoir tester cette modeste application</Text>
+        <View     style={styles.spacer}></View>
+        <View     style={styles.spacer}></View>
+
+        </View>
+                        <View     style={styles.spacer}></View>
+                <View     style={styles.spacer}></View>
+                                <View     style={styles.spacer}></View>
+                <View     style={styles.spacer}></View>
+          <View style={{ flex: 1,marginLeft: 10,backgroundColor:"#e0f2f1", justifyContent: 'right', alignItems: 'right' }}>
+         <Text style={{ justifyContent: 'right', alignItems: 'right' }}>Aurelie PEREIRA, </Text>
+        <Text style={{ justifyContent: 'right', alignItems: 'right' }}>Interne en médécine </Text>
+
+        </View>
+     </View>
     );
   }
 }
@@ -25,7 +40,7 @@ class SettingsScreen extends React.Component {
 class SourceScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+      <View style={{ flex: 10,backgroundColor:"#e0f2f1", marginLeft : 10, marginRight: 10}}>
           <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>Les sources </Text>
 
         <View style={{ flex: 5}}>
@@ -76,7 +91,7 @@ class CutaneeScreen extends React.Component {
   render() {
     return (
 
-      <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+      <View style={{ flex: 10,backgroundColor:"#e0f2f1", marginLeft : 10, marginRight: 10}}>
               <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>Les sources Cutanée</Text>
 
              <View style={{ flex: 7}}>
@@ -99,7 +114,7 @@ class CutaneeScreen extends React.Component {
 class DigestiveScreen extends React.Component {
   render() {
     return (
-          <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+          <View style={{ flex: 10,backgroundColor:"#e0f2f1", marginLeft : 10, marginRight: 10}}>
              <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>Les sources Digestives</Text>
 
              <View style={{ flex: 7}}>
@@ -124,7 +139,7 @@ class RespiratoireScreen extends React.Component {
   render() {
     return (
 
-        <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+        <View style={{ flex: 10,backgroundColor:"#e0f2f1", marginLeft : 10, marginRight: 10}}>
               <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>Les sources Respiratoire</Text>
 
              <View style={{ flex: 7}}>
@@ -145,7 +160,7 @@ class RespiratoireScreen extends React.Component {
 class EffetSanteScreen extends React.Component {
   render() {
     return (
-        <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+        <View style={{ flex: 10,backgroundColor:"#e0f2f1", marginLeft : 10, marginRight: 10}}>
               <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>Les perturbateurs endocriniens ont donc une action sur nos hormones.</Text>
 
              <View style={{ flex: 7}}>
@@ -155,16 +170,16 @@ class EffetSanteScreen extends React.Component {
                  <View     style={styles.spacer}></View>
                  <Text>En voici les principaux :</Text>
                 <View     style={styles.spacer}></View>
-                    <Text>- prématurité, petit poids de naissance</Text>
-                    <Text>- retard de croissance du bébé pendant la grossesse</Text>
-                    <Text>- malformations génitales : cryptorchidie (testicules non descendus dans les bourses), hypospadias (méat urinaire mal positionné), micro pénis</Text>
-                    <Text>- troubles neurologiques et du comportement : autisme, baisse du QI, hyperactivitén troubles de l'attention</Text>
-                    <Text>- puberté précoce chez les filles</Text>
-                    <Text>- maladies gynécologiques : syndrome des ovaires polykystiques, endométriose</Text>
-                    <Text>- problème de fertilité à l'âge adulte</Text>
-                    <Text>- dysthyroidies : hypothyroidie,hyperthyroidie</Text>
-                    <Text>- cancers</Text>
-                    <Text>- maladies métaboliques : obésité, diabète</Text>
+                    <Text><Ionicons name="ios-arrow-dropright" size={10} color="black" /> prématurité, petit poids de naissance</Text>
+                    <Text><Ionicons name="ios-arrow-dropright" size={10} color="black" /> retard de croissance du bébé pendant la grossesse</Text>
+                    <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> malformations génitales : cryptorchidie (testicules non descendus dans les bourses), hypospadias (méat urinaire mal positionné), micro pénis</Text>
+                    <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> troubles neurologiques et du comportement : autisme, baisse du QI, hyperactivitén troubles de l'attention</Text>
+                    <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> puberté précoce chez les filles</Text>
+                    <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> maladies gynécologiques : syndrome des ovaires polykystiques, endométriose</Text>
+                    <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> problème de fertilité à l'âge adulte</Text>
+                    <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> dysthyroidies : hypothyroidie,hyperthyroidie</Text>
+                    <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> cancers</Text>
+                    <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> maladies métaboliques : obésité, diabète</Text>
 </ScrollView>
            </View>
       </View>
@@ -175,7 +190,7 @@ class EffetSanteScreen extends React.Component {
 class DefinitionScreen extends React.Component {
   render() {
     return (
-        <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+        <View style={{ flex: 10,backgroundColor:"#e0f2f1", marginLeft : 10, marginRight: 10}}>
 
                 <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>
                 La définition des perturbateurs endocriniens</Text>
@@ -202,7 +217,7 @@ class DefinitionScreen extends React.Component {
 class ConseilsScreen extends React.Component {
   render() {
     return (
-    <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+    <View style={{ flex: 10,backgroundColor:"#e0f2f1", marginLeft : 10, marginRight: 10}}>
 
         <View style={styles.title}>
           <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>Conseils de prévention</Text>
@@ -271,23 +286,23 @@ class ConseilsScreen extends React.Component {
 class AlimentationScreen extends React.Component {
   render() {
     return (
-        <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+        <View style={{ flex: 10,backgroundColor:"#e0f2f1", marginLeft : 10, marginRight: 10}}>
               <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>Les perturbateurs endocriniens ont donc une action sur nos hormones.</Text>
 
              <View style={{ flex: 7}}>
              <ScrollView>
                         <Text>On peut diminuer son exposition aux perturbateurs endocriniens en suivant les conseils suivants :  </Text>
                         <View     style={styles.spacer}></View>
-                        <Text>- Avoir une alimentation variée, avec des produits non transformés.</Text>
-                        <Text>- Manger des fruits et des légumes frais sans pesticides, issus de l’alimentation biologique. Sinon, au moins les laver et les éplucher.</Text>
-                        <Text>- Éviter les fastfood et les plats cuisinés autant que possible.</Text>
-                        <Text>- Limiter la consommation de viande grasse et de poissons contenant un fort taux de methylmercure (requin, espadon, maquereau et bar),</Text>
-                        <Text>      ainsi que les poissons d’eau douce (anguille, barbeau, brème, carpe, silure) et les poissons en haut de la chaine alimentaire (thon, espadon et saumon)</Text>
-                        <Text>- réduire la consommation d’aliments en conserve.</Text>
-                        <Text>- Utiliser récipients en verre, en inox, en céramique ou en terre cuite pour la conservation des aliments et pour leur réchauffage.</Text>
-                        <Text>- Éviter de réchauffer au micro ondes les aliments contenus dans du plastique. Sinon, utiliser au moins des plastiques sans bisphénol A.</Text>
-                        <Text>- Éviter les poêles revêtues de téflon, ne pas cuisiner avec des poêles en téflon éraflé.</Text>
-                        <Text>- éviter la cuisson au barbecue.</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Avoir une alimentation variée, avec des produits non transformés.</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Manger des fruits et des légumes frais sans pesticides, issus de l’alimentation biologique. Sinon, au moins les laver et les éplucher.</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter les fastfood et les plats cuisinés autant que possible.</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Limiter la consommation de viande grasse et de poissons contenant un fort taux de methylmercure (requin, espadon, maquereau et bar),</Text>
+                        <Text>     ainsi que les poissons d’eau douce (anguille, barbeau, brème, carpe, silure) et les poissons en haut de la chaine alimentaire (thon, espadon et saumon)</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> réduire la consommation d’aliments en conserve.</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Utiliser récipients en verre, en inox, en céramique ou en terre cuite pour la conservation des aliments et pour leur réchauffage.</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter de réchauffer au micro ondes les aliments contenus dans du plastique. Sinon, utiliser au moins des plastiques sans bisphénol A.</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter les poêles revêtues de téflon, ne pas cuisiner avec des poêles en téflon éraflé.</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> éviter la cuisson au barbecue.</Text>
              </ScrollView>
            </View>
       </View>
@@ -299,7 +314,7 @@ class AlimentationScreen extends React.Component {
 class CosmetiqueScreen extends React.Component {
   render() {
     return (
-        <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+        <View style={{ flex: 10,backgroundColor:"#e0f2f1", marginLeft : 10, marginRight: 10}}>
               <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>Les perturbateurs endocriniens ont donc une action sur nos hormones.</Text>
 
              <View style={{ flex: 7}}>
@@ -308,17 +323,17 @@ class CosmetiqueScreen extends React.Component {
                         <View     style={styles.spacer}></View>
                         <Text>Voici quelques recommandations pour les éviter :</Text>
                         <View     style={styles.spacer}></View>
-                        <Text>- Utiliser le moins possible de produits cosmétiques</Text>
-                        <Text>- Ne pas colorer ses cheveux, ou au moins éviter les colorations permanentes</Text>
-                        <Text>- Éviter les produits avec parfum</Text>
-                        <Text>- Éviter les sprays</Text>
-                        <Text>- Utiliser des cosmétiques fabriqués avec des colorants naturels</Text>
-                        <Text>- Éviter les vernis, sinon préférer les bio (aérer bien après la pose : vapeur de formaldéhyde). Éviter les faux ongles</Text>
-                        <Text>- Préférer les pains de savon plutôt que des savons liquides</Text>
-                        <Text>- Pour l’hydratation préférer les huiles végétales que les crèmes</Text>
-                        <Text>- Pour les crèmes solaires, déjà éviter le soleil pendant la grossesse, utiliser de préférence des crèmes solaires minérales</Text>
-                        <Text>- Éviter le triclosan dans les dentifrices</Text>
-                        <Text>- Attention au parabènes : éviter les E214 à E219</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Utiliser le moins possible de produits cosmétiques</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Ne pas colorer ses cheveux, ou au moins éviter les colorations permanentes</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter les produits avec parfum</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter les sprays</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Utiliser des cosmétiques fabriqués avec des colorants naturels</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter les vernis, sinon préférer les bio (aérer bien après la pose : vapeur de formaldéhyde). Éviter les faux ongles</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Préférer les pains de savon plutôt que des savons liquides</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Pour l’hydratation préférer les huiles végétales que les crèmes</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Pour les crèmes solaires, déjà éviter le soleil pendant la grossesse, utiliser de préférence des crèmes solaires minérales</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter le triclosan dans les dentifrices</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Attention au parabènes : éviter les E214 à E219</Text>
              </ScrollView>
            </View>
       </View>
@@ -330,7 +345,7 @@ class CosmetiqueScreen extends React.Component {
 class JardinScreen extends React.Component {
   render() {
     return (
-        <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+        <View style={{ flex: 10,backgroundColor:"#e0f2f1", marginLeft : 10, marginRight: 10}}>
               <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>Les perturbateurs endocriniens ont donc une action sur nos hormones.</Text>
 
              <View style={{ flex: 7}}>
@@ -339,16 +354,16 @@ class JardinScreen extends React.Component {
                         <View     style={styles.spacer}></View>
                         <Text>Voici quelques conseils pour diminuer son exposition :</Text>
                         <View     style={styles.spacer}></View>
-                        <Text>- Aérer la maison deux fois par jour au moins dix minutes et faire la poussière au moins une fois par semaine avec un chiffon microfibre (éviter les lingettes)</Text>
-                        <Text>- Utiliser le moins de produits possibles</Text>
-                        <Text>- Éviter insecticides et herbicides pour les plantes de la maison, le jardin ou les animaux (colliers antipuce par exemple)</Text>
-                        <Text>- Éviter l’achat de produits neufs en plastiques (nouvelle télévision par exemple)</Text>
-                        <Text>- Utiliser dès que possible des produits naturels (vinaigre blanc, bicarbonate de soude, savon noir, savon de Marseille par exemple)</Text>
-                        <Text>- Éviter les produits agressifs (javel, désinfectants, antibactériens) ou au moins mettre des gants et un masque</Text>
-                        <Text>- Pour le linge, préférer les lessives en poudre (contiennent moins d’agents de surface)</Text>
-                        <Text>- Éviter les produits 3 en 1 pour le lave vaisselle</Text>
-                        <Text>- Éviter les blocs dans les toilettes</Text>
-                        <Text>- Éviter les sprays, limiter les bougies</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Aérer la maison deux fois par jour au moins dix minutes et faire la poussière au moins une fois par semaine avec un chiffon microfibre (éviter les lingettes)</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Utiliser le moins de produits possibles</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter insecticides et herbicides pour les plantes de la maison, le jardin ou les animaux (colliers antipuce par exemple)</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter l’achat de produits neufs en plastiques (nouvelle télévision par exemple)</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Utiliser dès que possible des produits naturels (vinaigre blanc, bicarbonate de soude, savon noir, savon de Marseille par exemple)</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter les produits agressifs (javel, désinfectants, antibactériens) ou au moins mettre des gants et un masque</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Pour le linge, préférer les lessives en poudre (contiennent moins d’agents de surface)</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter les produits 3 en 1 pour le lave vaisselle</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter les blocs dans les toilettes</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter les sprays, limiter les bougies</Text>
              </ScrollView>
            </View>
       </View>
@@ -359,7 +374,7 @@ class JardinScreen extends React.Component {
 class ChambreScreen extends React.Component {
   render() {
     return (
-        <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+        <View style={{ flex: 10,backgroundColor:"#e0f2f1", marginLeft : 10, marginRight: 10}}>
               <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>Les perturbateurs endocriniens ont donc une action sur nos hormones.</Text>
 
              <View style={{ flex: 7}}>
@@ -369,17 +384,17 @@ class ChambreScreen extends React.Component {
                         <View     style={styles.spacer}></View>
                         <Text>Voici quelques conseils pour diminuer son exposition :</Text>
                         <View     style={styles.spacer}></View>
-                        <Text>- Éviction de la pièce pendant les travaux pour la femme enceinte</Text>
-                        <Text>- Bien aérer la pièce pour évacuer les résidus volatiles</Text>
-                        <Text>- Acheter le mobilier de préférence plusieurs semaines avant l’arrivée de bébé en aérant la chambre tous les jours</Text>
-                        <Text>- Préférer les produits étiquetés A+ (émettre moins de polluants). Cf labels</Text>
-                        <Text>- Pour le choix des peintures éviter celles qui contiennent des composés volatiles, préférer celles à base de caséine ou de chaux avec des pigments naturels</Text>
-                        <Text>- Éviter les papiers peints qui peuvent rejeter des phtalates</Text>
-                        <Text>- Éviter les sols en PVC</Text>
-                        <Text>- Préférer un bois FSC (écogéré) pour le lit, bois non traité</Text>
-                        <Text>- Éviter les alèses en PVC</Text>
-                        <Text>- Aérer la chambre avant le coucher</Text>
-                        <Text>- Éviter les tapis (retardateurs de flammes)</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviction de la pièce pendant les travaux pour la femme enceinte</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Bien aérer la pièce pour évacuer les résidus volatiles</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Acheter le mobilier de préférence plusieurs semaines avant l’arrivée de bébé en aérant la chambre tous les jours</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Préférer les produits étiquetés A+ (émettre moins de polluants). Cf labels</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Pour le choix des peintures éviter celles qui contiennent des composés volatiles, préférer celles à base de caséine ou de chaux avec des pigments naturels</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter les papiers peints qui peuvent rejeter des phtalates</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter les sols en PVC</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Préférer un bois FSC (écogéré) pour le lit, bois non traité</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter les alèses en PVC</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Aérer la chambre avant le coucher</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter les tapis (retardateurs de flammes)</Text>
              </ScrollView>
            </View>
       </View>
@@ -391,18 +406,18 @@ class ChambreScreen extends React.Component {
 class GeneralScreen extends React.Component {
   render() {
     return (
-        <View style={{ flex: 10, marginLeft : 10, marginRight: 10}}>
+        <View style={{ flex: 10, backgroundColor:"#e0f2f1", marginLeft : 10, marginRight: 10}}>
               <Text style={{ flex: 2, justifyContent: 'center', alignItems: 'center',  marginTop : 10, fontWeight: 'bold' }}>Les perturbateurs endocriniens ont donc une action sur nos hormones.</Text>
 
              <View style={{ flex: 7}}>
              <ScrollView>
                         <Text>Voici quelques conseils généraux :</Text>
                         <View     style={styles.spacer}></View>
-                        <Text>- Éviter l’utilisation du plastique de manière générale (n°3 ou PVC, n°6 ou PS, n°7 ou PC),</Text>
-                        <Text>- Pas d’automédication mais consulter son médecin,</Text>
-                        <Text>- Toujours laver ses vêtements avant de les porter,</Text>
-                        <Text>- Préférer le tissu en coton bio pendant la grossesse,</Text>
-                        <Text>- Éviter les pictogrammes suivants :</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter l’utilisation du plastique de manière générale (n°3 ou PVC, n°6 ou PS, n°7 ou PC),</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Pas d’automédication mais consulter son médecin,</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Toujours laver ses vêtements avant de les porter,</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Préférer le tissu en coton bio pendant la grossesse,</Text>
+                        <Text><Ionicons name="ios-arrow-dropright" size={10} color="black"  /> Éviter les pictogrammes suivants :</Text>
              </ScrollView>
            </View>
       </View>
@@ -513,7 +528,7 @@ class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:"#339999",
+    backgroundColor:"#e0f2f1",
     margingBottom:4
   },
   title :{
@@ -531,7 +546,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   barre: {
-    backgroundColor:'white',
+    backgroundColor:'#e0f2f1',
     borderWidth: 3,
     borderColor: 'white'
   },
@@ -554,11 +569,12 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignContent:'stretch',
     alignItems:'stretch',
-    backgroundColor:"#339999",
+    backgroundColor:"#e0f2f1",
     flexWrap:'wrap'
   },
   menus_white :{
     flex: 4,
+    backgroundColor:'#e0f2f1',
     paddingTop: 20,
     paddingLeft: 10,
     paddingRight: 10,
@@ -576,7 +592,7 @@ const styles = StyleSheet.create({
     margingBottom :2,
     padding: 0.3,
     borderRadius: 4,
-    backgroundColor:'white',
+    backgroundColor:'#b2dfdb',
     flexDirection: 'row',
     boxShadow: '0px 0px 1px 0px white'
   },
@@ -585,7 +601,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     alignContent: 'center',
-    backgroundColor: '#339999'
+    backgroundColor: '#b2dfdb'
   },
   buttonText: {
     flex:1,
@@ -600,7 +616,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     borderWidth: 3,
     borderColor: 'white',
-    backgroundColor:'#339999',
+    backgroundColor:'#b2dfdb',
     alignItems: 'center',
     justifyContent: 'center',
     fontFamily: 'Oswald',
@@ -682,39 +698,39 @@ const HomeStack = StackNavigator({
 
 });
 
-const SettingsStack = StackNavigator({
-  Settings: { screen: SettingsScreen },
+const InfoStack = StackNavigator({
+  Information: { screen: InformationScreen },
   Details: { screen: DetailsScreen },
 });
 
 export default TabNavigator(
   {
     Home: { screen: HomeStack },
-    Settings: { screen: SettingsStack },
+    Info: { screen: InfoStack },
   },
   {
     navigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused, tintColor }) => {
         const { routeName } = navigation.state;
         let iconName;
-        if (routeName === 'Home') {
-          iconName = `ios-information-circle${focused ? '' : '-outline'}`;
-        } else if (routeName === 'Settings') {
-          iconName = `ios-options${focused ? '' : '-outline'}`;
+        if (routeName === 'Info') {
+          iconName = 'ios-information-circle';
+        } else if (routeName === 'Home') {
+          iconName = "ios-home";
         }
 
         // You can return any component that you like here! We usually use an
         // icon component from react-native-vector-icons
-        return <Ionicons name={iconName} size={25} color={tintColor} />;
+        return <Ionicons name={iconName} size={25} color="black" />;
       },
     }),
     tabBarComponent: TabBarBottom,
     tabBarPosition: 'bottom',
     tabBarOptions: {
-      activeTintColor: 'white',
-      activeBackgroundColor : '#00859D',
+      activeTintColor: 'black',
+      activeBackgroundColor : '#b2dfdb',
       inactiveTintColor: 'black',
-      inactiveBackgroundColor : 'white',
+      inactiveBackgroundColor : '#e0f2f1',
      labelStyle: {
         fontSize: 15,
         fontFamily: 'Oswald'
