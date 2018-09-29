@@ -6,7 +6,7 @@
     "jest-expo": "23.0.0",
     "react-test-renderer": "16.0.0"
   },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "main": ".np",
   "scripts": {
     "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
@@ -21,7 +21,7 @@
     "appcenter": "^1.7.1",
     "appcenter-analytics": "^1.7.1",
     "appcenter-crashes": "^1.7.1",
-    "expo": "^23.0.4",
+    "expo": "^23.1.1",
     "lodash": "^4.17.10",
     "react": "16.0.0",
     "react-native": "0.50.3",

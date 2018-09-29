@@ -1,8 +1,12 @@
 {
   "expo": {
-    "name": "PerEndo",
-    "slug": "PerEndo",
-    "sdkVersion": "UNVERSIONED",
-    "privacy": "public"
+    "name": "Your App Name",
+    "icon": "./components/asset/app-icon.png",
+    "version": "1.0.0",
+    "slug": "your-app-perendo",
+    "sdkVersion": "23.0.0",
+    "android": {
+      "package": "com.perendo.perendo"
+    }
   }
 }
