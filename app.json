@@ -1,5 +1,8 @@
 {
   "expo": {
-    "sdkVersion": "23.0.0"
+    "name": "PerEndo",
+    "slug": "PerEndo",
+    "sdkVersion": "UNVERSIONED",
+    "privacy": "public"
   }
 }
