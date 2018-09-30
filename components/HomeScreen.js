@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, View, ScrollView, StyleSheet, StatusBar, TouchableHighlight } from 'react-native';
+import { Button, Text, View, ScrollView, StyleSheet, StatusBar, TouchableHighlight, WebView, Linking } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // 6.3.1
 import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation'; // 2.11.2
 import Icon from 'react-native-vector-icons/FontAwesome'; // 5.0.0
@@ -422,14 +422,22 @@ class DetailsScreen extends React.Component {
   }
 
   render() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>{this.props.title}</Text>
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>{this.props.detail}</Text>
-      </View>
+const uri = 'http://www.projetfees.fr/';
 
-      </View>
+
+    return (
+    <WebView
+           ref={(ref) => { this.webview = ref; }}
+           source={{ uri }}
+           onNavigationStateChange={(event) => {
+             if (event.url !== uri) {
+               this.webview.stopLoading();
+               Linking.openURL(event.url);
+             }
+           }}
+         />
+
+
     );
   }
 }

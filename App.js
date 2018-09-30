@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, View, ScrollView, StyleSheet, StatusBar, TouchableHighlight } from 'react-native';
+import { Button, Text, View, ScrollView, StyleSheet, StatusBar, TouchableHighlight, WebView, Linking } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // 6.3.1
 import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation'; // 2.11.2
 import Icon from 'react-native-vector-icons/FontAwesome'; // 5.0.0
@@ -427,28 +427,64 @@ class GeneralScreen extends React.Component {
 
 
 
-class DetailsScreen extends React.Component {
+class LiensScreen extends React.Component {
 
     constructor(props){
     super(props)
     this.state ={
-      title: 'DetailsScreen2',
+      title: 'liens utiles',
     }
   }
 
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>{this.props.title}</Text>
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>{this.props.detail}</Text>
-      </View>
 
-      </View>
+
+  render() {
+const projetfees = 'http://www.projetfees.fr/';
+const projetnesting = 'http://www.projetnesting.fr/';
+const alertemedecin = 'https://www.alerte-medecins-pesticides.fr/';
+
+
+
+    return (
+
+    <View style={styles.container}>
+    <WebView
+           ref={(ref) => { this.webview = ref; }}
+           source={{ projetfees }}
+           onNavigationStateChange={(event) => {
+             if (event.url !== projetfees) {
+               this.webview.stopLoading();
+               Linking.openURL(event.url);
+             }
+           }}
+         />
+<WebView
+           ref={(ref) => { this.webview = ref; }}
+           source={{ projetnesting }}
+           onNavigationStateChange={(event) => {
+             if (event.url !== projetnesting) {
+               this.webview.stopLoading();
+               Linking.openURL(event.url);
+             }
+           }}
+         />
+
+<WebView
+           ref={(ref) => { this.webview = ref; }}
+           source={{ alertemedecin }}
+           onNavigationStateChange={(event) => {
+             if (event.url !== alertemedecin) {
+               this.webview.stopLoading();
+               Linking.openURL(event.url);
+             }
+           }}
+         />
+
+</View>
+
     );
   }
 }
-
 
 class HomeScreen extends React.Component {
 
@@ -511,7 +547,7 @@ class HomeScreen extends React.Component {
               </TouchableHighlight>
             </View>
             <View style={styles.cube}>
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('Details')} underlayColor="white">
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('Liens')} underlayColor="white">
                 <View style={styles.button}>
                     <Text style={styles.buttonText}>Liens utiles</Text>
                   </View>
@@ -694,13 +730,13 @@ const HomeStack = StackNavigator({
       headerLayoutPreset : 'center'
     }) },
 
-  Details: { screen: DetailsScreen }
+  Liens: { screen: LiensScreen }
 
 });
 
 const InfoStack = StackNavigator({
   Information: { screen: InformationScreen },
-  Details: { screen: DetailsScreen },
+  Liens: { screen: LiensScreen },
 });
 
 export default TabNavigator(
