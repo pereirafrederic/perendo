@@ -507,7 +507,7 @@ class HomeScreen extends React.Component {
         </View>
         <View stylz={styles.barre}> </View>
         <View style={styles.detail}>
-          <Text> Les perturbateurs endocriniens (PE) sont « des substances chimiques d’origine naturelle ou artificielle étrangères à l’organisme qui peuvent interférer avec le fonctionnement du système endocrinien et induire ainsi des effets délétères sur cet organisme ou sur ses descendants »</Text>
+          <Text>Cette application est le fruit d'un travail de fin d'étude d'une médécin généraliste. Elle a été crée pour que les femmes enceintes puissent avoir accès à n'importe quel moment à des conseils sur l'exposition aux pertubateurs endocriniens' </Text>
         </View>
         <View style={styles.menus}>
           <View style={styles.cubeplein}>
